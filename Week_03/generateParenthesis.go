@@ -1,13 +1,13 @@
 
-
+var res []string
 func generateParenthesis(n int) []string {
-	generate(0,0,n,"")
-	return []string{}	
+	return generate(0,0,n,"")
+	//return []string{}	
 }
 
-func generate(left int,right int, n int, s string) []string {
+func generate(left int,right int, n int, s string) {
 	//terminator
-	res := []string{}
+	
 	if left ==n &&  right == n {
 		//filter
 		/*
@@ -16,7 +16,6 @@ func generate(left int,right int, n int, s string) []string {
 		*/
 		res = append(res,s)
 		//fmt.Println(s)
-		return res
 	}
 
 	//process curent logic,left right

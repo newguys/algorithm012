@@ -15,7 +15,7 @@ func helper(cur []int,ci,start,n,k int ,res *[][]int)  {
 		*res  = append(*res,tmp)
 		return
 	}
-	for i := start; i < n-k+1; i++ {
+	for i := start; i <= n-k+1; i++ {
 		cur[ci] = i
 		helper(cur,ci+1,i+1,n,k,res)
 	}
